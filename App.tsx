@@ -40,8 +40,9 @@ export default function App() {
 
   // Initialize Audio
   useEffect(() => {
-    audioRef.current = new Audio();
-    audioRef.current.volume = 0.5;
+audioRef.current = new Audio();
+audioRef.current.crossOrigin = "anonymous"; 
+audioRef.current.volume = 0.5;
     
     const handleEnded = () => {
       setCurrentTrackIndex(prev => {
